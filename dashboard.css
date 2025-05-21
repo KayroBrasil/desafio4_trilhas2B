@@ -1,0 +1,472 @@
+/* Reset básico: remove margens/paddings padrão e aplica fonte global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Cor de fundo geral do corpo da página */
+body {
+  background-color: #ffffff;
+}
+
+/* Define a estrutura principal da página com flexbox ocupando toda a tela */
+.pagina {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* MENU LATERAL */
+
+/* Estilo da barra lateral à esquerda */
+.menu-lateral {
+  width: 80px;
+  background-color: #193C57;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo no topo do menu lateral */
+.menu-lateral .logo {
+  width: 40px;
+  margin-bottom: 40px;
+}
+
+/* Lista vertical dos ícones no menu */
+.menu-lateral nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+}
+
+/* Itens do menu: alinhados ao centro e com texto pequeno */
+.menu-lateral nav li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Ícones dos itens de menu */
+.menu-lateral nav li img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 5px;
+}
+
+/*  CONTEÚDO PRINCIPAL */
+
+/* Área ao lado do menu lateral onde fica o conteúdo principal */
+.conteudo-principal {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+}
+
+/* FILTROS */
+
+/* Caixa de filtros fixa no topo da área principal */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: #eeeeee;
+  padding: 20px;
+  width: calc(100% - 80px); /* largura total menos o menu */
+  position: fixed;
+  top: 0;
+  left: 80px; /* desloca para o lado do menu */
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* sombra inferior leve */
+}
+
+/* Espaço extra acima do conteúdo para não ficar coberto pelos filtros */
+.conteudo-principal {
+  margin-top: 10px;
+}
+
+/* Estilo dos <select> nos filtros */
+.filtros select {
+  padding: 12px 20px 12px 40px;
+  border-radius: 12px;
+  border: 1px solid #333;
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #000;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  min-width: 170px;
+  appearance: none;
+  cursor: pointer;
+
+  /* Ícone de seta personalizado */
+  background-image: url('img/seta-para-baixo.png');
+  background-repeat: no-repeat;
+  background-position: left 10px center;
+  background-size: 16px auto;
+}
+
+/* Tamanho maior do campo "indicador" */
+.filtros select.indicador {
+  min-width: 250px;
+}
+
+/* Estilo visual das opções do select */
+.filtros select option {
+  background-color: #d9d9d9;
+  color: #000000;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* INTRODUÇÃO */
+
+/* Bloco com título, texto e imagem */
+.introducao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffffff;
+  padding: 1px 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Texto da introdução com largura máxima */
+.introducao .texto {
+  max-width: 50%;
+}
+
+/* Título principal */
+.introducao h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #193C57;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+/* Parágrafo abaixo do título */
+.introducao p {
+  font-size: 1.1rem;
+  color: #1A3C58;
+  margin-bottom: 30px;
+}
+
+/* Botões da introdução */
+.botoes {
+  display: flex;
+  gap: 20px;
+}
+
+/* Botão principal */
+.botao-destaque {
+  background-color: #0f2e47;
+  color: white;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Efeito hover no botão principal */
+.botao-destaque:hover {
+  background-color: #153e5e;
+}
+
+/* Botão secundário */
+.botao-secundario {
+  background-color: rgb(222, 222, 222);
+  color: #000000;
+  border: 1px solid #000000;
+  padding: 12px 22px;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Imagem decorativa central */
+.imagem-central {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* INDICADORES */
+
+/* Bloco que contém os indicadores */
+.indicadores {
+  display: flex;
+  gap: 20px;
+}
+
+/* Cada card individual */
+.card-indicador {
+  flex: 1;
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Título do indicador */
+.card-indicador h3 {
+  margin: 0;
+  padding: 12px;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* Bordas e cores personalizadas por tipo de indicador */
+.card-indicador.evasao {
+  border-color: #4579A1;
+}
+.card-indicador.evasao h3 {
+  background-color: #4579A1;
+  border-radius: 15px;
+}
+
+.card-indicador.ideb {
+  border-color: #4579A1;
+}
+.card-indicador.ideb h3 {
+  color: #215D68;
+}
+
+.card-indicador.infraestrutura {
+  border-color: #FFD658;
+}
+.card-indicador.infraestrutura h3 {
+  background-color: #FFD658;
+  border-radius: 15px;
+  color: #000;
+}
+
+/* Parte inferior dos indicadores com imagem e valor */
+.conteudo-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px 10px;
+}
+
+/* Ícones dentro dos cards */
+.conteudo-card img {
+  width: 90px;
+  height: 70px;
+}
+
+/* Valor numérico grande */
+.valor {
+  font-size: 50px;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Barra de progresso */
+.barra {
+  width: 90%;
+  margin: 0 auto 15px auto;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Preenchimento da barra */
+.preenchido {
+  height: 100%;
+  border-radius: 6px;
+}
+
+/* Cores e larguras específicas de cada barra */
+.barra-evasao {
+  background-color: #31BFD9;
+  width: 60%;
+}
+
+.barra-ideb {
+  background-color: #2B8292;
+  width: 47%;
+}
+
+.barra-infra {
+  background-color: #FFD658;
+  width: 62%;
+}
+
+/* Cores dos valores numéricos por tipo de card */
+.card-indicador.evasao .valor {
+  color: #000000;
+}
+
+.card-indicador.ideb .valor {
+  color: #183F57;
+}
+
+.card-indicador.infraestrutura .valor {
+  color: #FFD658;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .menu-lateral {
+    width: 100%;
+    height: 70px;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px 40px;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+  }
+
+  .menu-lateral .logo {
+    width: 30px;
+    margin: 0;
+  }
+
+  .menu-lateral nav ul {
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-lateral nav li {
+    flex-direction: column;
+    font-size: 9px;
+  }
+
+  .menu-lateral nav li img {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 3px;
+  }
+
+  .filtros {
+    left: 0; /* Remove espaço do menu lateral */
+    width: 100%; /* Ocupa toda a largura */
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+  }
+
+   .filtros select {
+    font-size: 11px;
+    min-width: 80px;
+    max-width: 100px;
+    padding: 6px 8px 6px 25px;
+  }
+
+
+  .filtros select.indicador {
+    min-width: 120px;
+  }
+
+  .introducao {
+    flex-direction: column;
+    padding: 2px; /* Alinhamento à esquerda */
+    align-items: flex-start; /* Tudo colado à esquerda */
+    text-align: left; /* Texto alinhado à esquerda */
+    margin-top: 20px;
+  }
+
+  .introducao .texto {
+    max-width: 100%;
+    order: 1;
+  }
+
+  .introducao h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    word-break: normal;
+    margin-bottom: 15px;
+    text-align: left; 
+  }
+
+  .introducao p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .botoes {
+    flex-direction: row; /* Botões NA MESMA LINHA */
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap; /* Quebra linha se não couber */
+  }
+
+  .botao-destaque,
+  .botao-secundario {
+    flex: auto; /* Impede que os botões estiquem */
+    padding: 10px 15px; /* Reduz um pouco o padding */
+  }
+
+  .imagem-central {
+    width: 100%;
+    order: 2;
+    margin-top: 20px;
+  }
+  
+  /* Força 2 cards na primeira linha e 1 na segunda */
+  .indicadores {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "evasao ideb"
+      "infra infra";
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .card-indicador.evasao {
+    grid-area: evasao;
+  }
+  
+  .card-indicador.ideb {
+    grid-area: ideb;
+  }
+  
+  .card-indicador.infraestrutura {
+    grid-area: infra;
+    margin-top: 15px;
+  }
+
+  /* Redução de tamanho para caber */
+  .card-indicador h3 {
+    font-size: 0.9rem;
+    white-space: normal;
+    padding: 8px 4px;
+  }
+  
+  .valor {
+    font-size: 1.8rem;
+  }
+  
+  .conteudo-card img {
+    width: 40px;
+    height: 30px;
+  }
+}

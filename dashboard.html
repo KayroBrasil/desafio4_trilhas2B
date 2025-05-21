@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Educação</title>
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="pagina"> <!-- Contêiner principal da página -->
+
+    <!-- MENU LATERAL -->
+    <aside class="menu-lateral">
+      <!-- Logo no topo do menu -->
+      <a href="index.html"> 
+        <img src="img/logo site.png" alt="Logo" class="logo">
+      </a>
+      
+      <!-- Navegação com lista de opções -->
+      <nav>
+        <ul>
+          <!-- Dashboard -->
+          <li>
+            <img src="img/icone dashboard.png" alt="">
+            <span>Dashboard</span>
+          </li>
+
+          <!-- Indicadores -->
+          <li>
+            <img src="img/icone barras.png" alt="">
+            <span>Indicadores</span>
+          </li>
+
+          <!-- Comparações -->
+          <li>
+            <img src="img/icone comparação.png" alt="">
+            <span>Comparações</span>
+          </li>
+
+          <!-- Escolas -->
+          <li>
+            <img src="img/icone escolas.png" alt="">
+            <span>Escolas</span>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- FILTROS SUPERIORES -->
+    <div class="filtros">
+      <!-- Filtro de Estado -->
+      <select>
+        <option>Estado</option>
+        <option>MA</option>
+        <option>MG</option>
+        <option>PI</option>
+      </select>
+
+      <!-- Filtro de Município -->
+      <select>
+        <option>Município</option>
+        <option>São Luís</option>
+        <option>S.J.D.Ribamar</option>
+        <option>Imperatriz</option>
+      </select>
+
+      <!-- Filtro de Ano -->
+      <select>
+        <option>Ano</option>
+        <option>2025</option>
+        <option>2024</option>
+        <option>2023</option>
+      </select>
+
+      <!-- Filtro de Indicador -->
+      <select class="indicador">
+        <option>Indicador</option>
+        <option>EVASÃO ESCOLAR</option>
+        <option>IDEB</option>
+        <option>INFRAESTRUTURA</option>
+      </select>
+    </div>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="conteudo-principal">
+      
+      <!--  INTRODUÇÃO -->
+      <section class="introducao">
+        <div class="texto">
+          <h1>Facilitar o acesso à educação básica no Brasil</h1>
+          <p>Visualize dados sobre IDEB, evasão escolar e infraestrutura de forma simples e interativa.</p>
+
+          <!-- Botões -->
+          <div class="botoes">
+            <button class="botao-destaque">Explorar Indicadores</button>
+            <button class="botao-secundario">Sobre os Dados</button>
+          </div>
+        </div>
+
+        <!--imagem ao lado do texto -->
+        <img src="img/pessoas.png" alt="Ilustração de equipe" class="imagem-central">
+      </section>
+
+      <!-- SEÇÃO DE INDICADORES -->
+      <section class="indicadores">
+        
+        <!-- Evasão Escolar -->
+        <div class="card-indicador evasao">
+          <h3>EVASÃO ESCOLAR</h3>
+          <div class="conteudo-card">
+            <img src="img/icone evasao.png" alt="">
+            <span class="valor">15,2%</span>
+          </div>
+          <!-- Barra de progresso personalizada -->
+          <div class="barra">
+            <div class="preenchido barra-evasao"></div>
+          </div>
+        </div>
+
+        <!-- IDEB -->
+        <div class="card-indicador ideb">
+          <h3>IDEB</h3>
+          <div class="conteudo-card">
+            <img src="img/icone IDEB.png" alt="">
+            <span class="valor">4,7</span>
+          </div>
+          <div class="barra">
+            <div class="preenchido barra-ideb"></div>
+          </div>
+        </div>
+
+        <!-- Infraestrutura -->
+        <div class="card-indicador infraestrutura">
+          <h3>INFRAESTRUTURA ESCOLAR</h3>
+          <div class="conteudo-card">
+            <img src="img/icone infraestrutura.png" alt="">
+            <span class="valor">62%</span>
+          </div>
+          <div class="barra">
+            <div class="preenchido barra-infra"></div>
+          </div>
+        </div>
+
+      </section> <!-- Fim dos indicadores -->
+
+    </main> <!-- Fim do conteúdo principal -->
+  </div> <!-- Fim da div "pagina" -->
+</body>
+</html>
